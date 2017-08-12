@@ -1,0 +1,22 @@
+{
+    "name": "matijabelec/acl-php",
+    "description": "Acl",
+    "license": "MIT",
+    "keywords": ["acl"],
+    "authors": [
+        {
+            "name": "Matija Belec",
+            "email": "matijabelec1@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "MatijaBelec\\Acl\\": "src"
+        }
+    }
+}
