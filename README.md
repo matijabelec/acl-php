@@ -1,6 +1,6 @@
 # acl-php
 
-[![Packagist](https://img.shields.io/packagist/v/matijabelec/acl-php.svg)]()
+[![Packagist](https://img.shields.io/packagist/v/matijabelec/acl-php.svg)](https://packagist.org/packages/matijabelec/acl-php)
 
 Custom ACL with role hierarchy (any role can have max. of 1 parent role). Role hierarchy is used to automatically inherit actions allowed for parent(s) roles to selected role. Actions are just strings that describes some action. Roles are, basically, strings that represents types of users (but not limited to).
 
