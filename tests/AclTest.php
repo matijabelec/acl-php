@@ -31,5 +31,15 @@ class AclTest extends PHPUnit_Framework_TestCase {
     $this->assertNotTrue($acl->isAllowed('guest', 'canRead'), 'Guest canRead should be denied');
     $this->assertTrue($acl->isAllowed('guest', 'canDelete'), 'Guest canDelete should be allowed');
     $this->assertTrue($acl->isAllowed('guest', 'canUpdate'), 'Guest canUpdate should be allowed');
+
+    $this->assertTrue($acl->isDenied('administrator', 'canRead'), 'Administrator canRead should be denied');
+    $this->assertNotTrue($acl->isDenied('administrator', 'canDelete'), 'Administrator canDelete should be allowed');
+    $this->assertNotTrue($acl->isDenied('administrator', 'canUpdate'), 'Administrator canUpdate should be allowed');
+    $this->assertTrue($acl->isDenied('user', 'canDelete'), 'User canDelete should be denied');
+    $this->assertNotTrue($acl->isDenied('user', 'canCreate'), 'User canCreate should be allowed');
+    $this->assertTrue($acl->isDenied('user', 'canRead'), 'User canRead should be denied');
+    $this->assertTrue($acl->isDenied('guest', 'canRead'), 'Guest canRead should be denied');
+    $this->assertNotTrue($acl->isDenied('guest', 'canDelete'), 'Guest canDelete should be allowed');
+    $this->assertNotTrue($acl->isDenied('guest', 'canUpdate'), 'Guest canUpdate should be allowed');
   }
 }

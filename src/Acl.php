@@ -121,6 +121,16 @@ class Acl {
   }
 
   /**
+   * Check if action is denied for selected role.
+   * @param  string  $role   name of role
+   * @param  string  $action name of action to be checked with
+   * @return boolean         returns true if action is denied, false otherwise
+   */
+  public function isDenied($role, $action) {
+    return !($this->isAllowed($role, $action));
+  }
+
+  /**
    * Add role new role with optionally set parent.
    * @param string $role    new role name
    * @param string $parent  parent name of role or null if no parent (optional)
